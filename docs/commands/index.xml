@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Commands on NuKeeper</title>
+    <link>/NuKeeperDocs/commands/</link>
+    <description>Recent content in Commands on NuKeeper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/NuKeeperDocs/commands/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Inspect</title>
+      <link>/NuKeeperDocs/commands/inspect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/NuKeeperDocs/commands/inspect/</guid>
+      <description>The Inspect command is used to look at files already present on a file system and report possible updates, without any git or server interaction, or changes made locally.
+cd c:\code\MyProject nukeeper inspect  The path is a command-specific parameter. If not specified, the current folder will be used. e.g.
+nukeeper inspect c:\code\MyProject  </description>
+    </item>
+    
+    <item>
+      <title>Update</title>
+      <link>/NuKeeperDocs/commands/update/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/NuKeeperDocs/commands/update/</guid>
+      <description>The update command is used to look at files already present on a file system and apply an update locally, without any git or server interaction. The path is an optional parameter as in inspect.
+nukeeper update c:\code\MyProject  </description>
+    </item>
+    
+    <item>
+      <title>Repository</title>
+      <link>/NuKeeperDocs/commands/repository/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/NuKeeperDocs/commands/repository/</guid>
+      <description>The repository command is used to perform version checks and generate pull requests for a single repository. Point it at the https url of a repository, like this:
+nukeeper repo &amp;lt;RepoUri&amp;gt; &amp;lt;Token&amp;gt;  Or at the local repository if it&amp;rsquo;s a AzureDevops or VSTS repository:
+nukeeper repo . &amp;lt;Token&amp;gt; nukeeper repo C:/repos/myrepo &amp;lt;Token&amp;gt;  The repository Uri and the token are command-specific required parameters.
+The repository does not need to be already present on the machine.</description>
+    </item>
+    
+  </channel>
+</rss>
