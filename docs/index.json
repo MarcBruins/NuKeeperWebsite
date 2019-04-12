@@ -1,0 +1,43 @@
+[
+{
+	"uri": "http://example.org/basics/",
+	"title": "Basics",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://example.org/commands/",
+	"title": "Commands",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://example.org/platforms/",
+	"title": "Platforms",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://example.org/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://example.org/",
+	"title": "NuKeeper",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://example.org/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

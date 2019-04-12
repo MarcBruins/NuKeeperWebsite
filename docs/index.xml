@@ -2,72 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NuKeeper</title>
-    <link>/NuKeeperDocs/</link>
+    <link>http://example.org/</link>
     <description>Recent content on NuKeeper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/NuKeeperDocs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Inspect</title>
-      <link>/NuKeeperDocs/commands/inspect/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/NuKeeperDocs/commands/inspect/</guid>
-      <description>The Inspect command is used to look at files already present on a file system and report possible updates, without any git or server interaction, or changes made locally.
-cd c:\code\MyProject nukeeper inspect  The path is a command-specific parameter. If not specified, the current folder will be used. e.g.
-nukeeper inspect c:\code\MyProject  </description>
-    </item>
-    
-    <item>
-      <title>Update</title>
-      <link>/NuKeeperDocs/commands/update/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/NuKeeperDocs/commands/update/</guid>
-      <description>The update command is used to look at files already present on a file system and apply an update locally, without any git or server interaction. The path is an optional parameter as in inspect.
-nukeeper update c:\code\MyProject  </description>
-    </item>
-    
-    <item>
-      <title>Repository</title>
-      <link>/NuKeeperDocs/commands/repository/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/NuKeeperDocs/commands/repository/</guid>
-      <description>The repository command is used to perform version checks and generate pull requests for a single repository. Point it at the https url of a repository, like this:
-nukeeper repo &amp;lt;RepoUri&amp;gt; &amp;lt;Token&amp;gt;  Or at the local repository if it&amp;rsquo;s a AzureDevops or VSTS repository:
-nukeeper repo . &amp;lt;Token&amp;gt; nukeeper repo C:/repos/myrepo &amp;lt;Token&amp;gt;  The repository Uri and the token are command-specific required parameters.
-The repository does not need to be already present on the machine.</description>
-    </item>
-    
-    <item>
-      <title>Configuration</title>
-      <link>/NuKeeperDocs/basics/configuration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/NuKeeperDocs/basics/configuration/</guid>
-      <description>Long name Short name Commands where it applies Default value     help h all    age a all 7d   change c all Major   useprerelease  all FromPrerelease   exclude e all null   include i all null   source s all NuGet.org public api url         verbosity v all Normal   logdestination  all Console   logfile  all &amp;lsquo;nukeeper.</description>
-    </item>
-    
-    <item>
-      <title>Installation</title>
-      <link>/NuKeeperDocs/basics/installation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/NuKeeperDocs/basics/installation/</guid>
-      <description>Getting NuKeeper You will first need .NET Core 2.1 or later installed.
-NuKeeper can be found on NuGet as a global tool. The source is on GitHub.
-Install NuKeeper with:
-dotnet tool install nukeeper --global
-Update NuKeeper with:
-dotnet tool update nukeeper --global
-Using NuKeeper Running nukeeper with no arguments shows the help.
-nukeeper --help  Help on a NuKeeper command
-nukeeper repo --help  Using NuKeeper Inspect code Use the inspect command to show updates that can be applied to a solution.</description>
-    </item>
     
   </channel>
 </rss>

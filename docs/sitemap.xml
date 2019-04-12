@@ -3,53 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/NuKeeperDocs/basics/</loc>
-    <lastmod>2019-04-08T09:10:10+02:00</lastmod>
+    <loc>http://example.org/basics/</loc>
   </url>
   
   <url>
-    <loc>/NuKeeperDocs/commands/inspect/</loc>
-    <lastmod>2019-04-08T09:10:10+02:00</lastmod>
+    <loc>http://example.org/commands/</loc>
   </url>
   
   <url>
-    <loc>/NuKeeperDocs/commands/</loc>
-    <lastmod>2019-04-08T09:10:10+02:00</lastmod>
+    <loc>http://example.org/platforms/</loc>
   </url>
   
   <url>
-    <loc>/NuKeeperDocs/commands/update/</loc>
-    <lastmod>2019-04-08T09:10:10+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/NuKeeperDocs/commands/repository/</loc>
-    <lastmod>2019-04-08T09:10:10+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/NuKeeperDocs/categories/</loc>
+    <loc>http://example.org/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/NuKeeperDocs/basics/configuration/</loc>
-    <lastmod>2019-04-08T09:10:10+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/NuKeeperDocs/basics/installation/</loc>
-    <lastmod>2019-04-08T09:10:10+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/NuKeeperDocs/</loc>
-    <lastmod>2019-04-08T09:10:10+02:00</lastmod>
+    <loc>http://example.org/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/NuKeeperDocs/tags/</loc>
+    <loc>http://example.org/tags/</loc>
     <priority>0</priority>
   </url>
   
