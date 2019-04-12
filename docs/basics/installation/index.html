@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>NuKeeper :: NuKeeper</title>
+    <title>Installation :: NuKeeper</title>
 
     
     <link href="/css/nucleus.css?1555087055" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/basics/installation/">
     <nav id="sidebar" class="">
 
 
@@ -75,7 +75,7 @@
   
     
     <li data-nav-id="/basics/" title="Basics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -99,7 +99,7 @@
  
   
     
-      <li data-nav-id="/basics/installation/" title="Installation" class="dd-item ">
+      <li data-nav-id="/basics/installation/" title="Installation" class="dd-item active">
         <a href="/basics/installation/">
         Installation
         
@@ -452,33 +452,209 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/NuKeeperDotnet/NuKeeper/edit/master/site/content/basics/installation.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>NuKeeper</a> > <a href='/basics/'>Basics</a> > Installation
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#using-nukeeper">Using NuKeeper</a>
+<ul>
+<li><a href="#update-command">Update command</a>
+<ul>
+<li><a href="#custom-nuget-feeds">Custom NuGet feeds</a></li>
+</ul></li>
+<li><a href="#global-command">Global command</a></li>
+<li><a href="#output-and-debug-logging">Output and debug logging</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Installation
+            </h1>
+          
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
+
+
+<p>You will first need <a href="https://www.microsoft.com/net">.NET Core 2.1 or later installed</a>.</p>
+
+<p>NuKeeper <a href="https://www.nuget.org/packages/NuKeeper/">can be found on NuGet as a global tool</a>. The <a href="https://github.com/NuKeeperDotNet/NuKeeper">source is on GitHub</a>.</p>
+
+<p>Install NuKeeper with:</p>
+
+<p><code>dotnet tool install nukeeper --global</code></p>
+
+<p>Update NuKeeper with:</p>
+
+<p><code>dotnet tool update nukeeper --global</code></p>
+
+<h1 id="using-nukeeper">Using NuKeeper</h1>
+
+<p>Running <code>nukeeper</code> with no arguments shows the help.</p>
+
+<pre><code class="language-bat">nukeeper --help
+</code></pre>
+
+<p>Help on a NuKeeper command</p>
+
+<pre><code class="language-bat">nukeeper repo --help
+</code></pre>
+
+<h2 id="update-command">Update command</h2>
+
+<h3 id="custom-nuget-feeds">Custom NuGet feeds</h3>
+
+<p>If you have a custom or private NuGet feed, it is recommended that you use <a href="https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesources">a <code>NuGet.config</code> file</a> in your repository. It will be used by NuKeeper, and by other tools. You can specify a list of NuGet sources on the command line. e.g.</p>
+
+<pre><code class="language-bat">nukeeper update --source https://api.nuget.org/v3/index.json --source http://packages.mycompany.com/nugetfeed
+</code></pre>
+
+<p>If you override this, you can chose to include the global public <code>api.nuget.org</code> feed or not. You may not need to, if your internal feed proxies the nuget.org feed.</p>
+
+<p>The order of precedence is:
+ 1) sources on command line
+ 2) <code>NuGet.config</code> file
+ 3) Default public NuGet.org feed</p>
+
+<h2 id="global-command">Global command</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">Github</th>
+<th align="center">AzureDevOps</th>
+<th align="center">BitBucket</th>
+<th align="center">GitLab</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">✔️</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+</tr>
+</tbody>
+</table>
+
+<p>Use the global command to update a particular package across your entire github server.</p>
+
+<pre><code class="language-bat">nukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3
+</code></pre>
+
+<h2 id="output-and-debug-logging">Output and debug logging</h2>
+
+<p>To make logging show more details.</p>
+
+<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --verbosity detailed
+</code></pre>
+
+<p>Send debug logs to a file instead of console.</p>
+
+<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --logfile somefile.log
+</code></pre>
+
+<p>To turn off logging entirely.</p>
+
+<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --logdestination off
+</code></pre>
+
+<p>Code metrics as the only output</p>
+
+<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --logdestination off --outputformat metrics
+</code></pre>
+
+<p>Report updates in Comma-separated value format, to file as output.</p>
+
+<pre><code class="language-bat">nukeeper inspect nukeeper inspect C:\code\MyApp --outputformat csv --outputfile packages.csv
+</code></pre>
+
+<p>Run Nukeeper on a remote repository, and just generate project metrics, no Pull Requests.</p>
+
+<pre><code class="language-bat">nukeeper repo https://github.com/myorg/myrepo mygithubtoken --maxpackageupdates 0 --logdestination off --outputformat metrics
+</code></pre>
+
+<p>Run NuKeeper on a remote repository without any logging or output at all, just Pull Requests generated</p>
+
+<pre><code class="language-bat"> nukeeper repo https://github.com/myorg/myrepo mygithubtoken --logdestination off --outputdestination off
+</code></pre>
+
+<hr />
+
+<p>For all possible options and modes, see <a href="Configuration">Configuration</a></p>
+
+
+<footer class=" footline" >
 	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
-	
-  
+</footer>
+
+
         
         </div> 
         
@@ -510,8 +686,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -525,6 +699,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -541,6 +716,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
